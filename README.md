@@ -1,10 +1,38 @@
 # prinit
-Prinit is a tool to make project starting faster. With one command you are ready to code.
-( If you want to use prinit you'll probably want to add it to the path )
-Execute prinit like this :
-   prinit \[project_name] \[project_workspace] \[project_type]
+Prinit is a tool to start your projects faster. With one command your project folder is ready.
 
-Prinit is made with 2 config files :
-  setting.txt - for now you can just edit the args order in prinit command
-        
-  workspaces.txt - with this you can add new workspaces
+# command
+
+>**If you want to use prinit you'll probably want to add it to the _path_**
+
+You can use prinit like this :
+
+`prinit [project_name] [project_workspace] [project_type]`
+
+Prinit will create a folder called *project_name* at folder path *project_workspace* with files of template folder *project_type*.
+
+If you do :
+
+`prinit my_project C:/users/[your_username]/Desktop cpp`
+
+You will have a folder called my_project on your desktop with the main files for a cpp project.
+
+# settings
+
+With *setting.txt* you can change the command order. `[project_name] [project_workspace] [project_type]`
+
+With *workspaces.txt* you can create a shortcut for a folder path that you use frequently.
+
+# workspaces
+
+Add this line in *workspaces.txt* :
+
+`Desktop : C:/Users/[your_username]/Desktop`
+
+And simply run the command :
+
+`prinit my_project Desktop cpp`
+
+And you will have the same result as before!
+
+_**There is a template folder with subfolders, these subfolders are the project_types, you can modify them as you please and/or add new ones.**_
