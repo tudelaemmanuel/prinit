@@ -17,7 +17,7 @@ Prinit will create a folder called *project_name* at folder path *project_worksp
 
 If you do :
 
-`prinit my_project C:/users/[your_username]/Desktop cpp`
+`prinit my_project C:\users\[username]\Desktop cpp`
 
 You will have a folder called my_project on your desktop with the main files for a cpp project.
 
@@ -31,7 +31,7 @@ With *workspaces.txt* you can create a shortcut for a folder path that you use f
 
 Add this line in *workspaces.txt* :
 
-`Desktop : C:/Users/[your_username]/Desktop`
+`Desktop : C:\Users\[your_username]\Desktop`
 
 And simply run the command :
 
