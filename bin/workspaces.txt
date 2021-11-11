@@ -4,4 +4,4 @@
 // Only use '\' in workspace location !
 
 // - Example -
-// Desktop : C:\Users\[username]\Bureau\
+// Desktop : C:\Users\[username]\Desktop\
