@@ -40,3 +40,13 @@ And simply run the command :
 And you will have the same result as before!
 
 _**There is a template folder with subfolders, these subfolders are the project_types, you can modify them as you please and/or add new ones.**_
+
+# templates
+
+_templates_ is the folder where templates folders are stored (cpp, c, etc...).
+
+- You can rename these folders as you please
+- You can modify their content (add files, modify files, etc...)
+- You can create new folders
+
+Everything is done automatically !
