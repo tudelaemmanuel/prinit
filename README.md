@@ -1,12 +1,12 @@
 # prinit
-Prinit is a tool to start your projects faster. With one command your project folder is ready.
+Prinit is a tool for winsows to start your projects faster.
 
 # command
 
 >**If you want to use prinit you'll probably want to add it to the _path_**
 
-- Copy bin folder and paste it in C:\
-- Rename it "prinit"
+- Download last release of prinit
+- Copy prinit folder and paste it in C:\
 - Add C:\prinit to your computer path like this https://stackoverflow.com/questions/44272416/how-to-add-a-folder-to-path-environment-variable-in-windows-10-with-screenshots
 
 You can use prinit like this :
