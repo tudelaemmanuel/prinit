@@ -148,7 +148,7 @@ int init_files(std::string projectf_p) {
     if (!std::filesystem::exists(projectf_p)) {
         // copy files into the directory
         std::string template_path = executable_path + "templates\\" + project_type;
-        std::filesystem::copy(template_path, projectf_p);
+        std::filesystem::copy(template_path, projectf_p, std::filesystem::copy_options::recursive);
         return 1;
     } else {
         std::cout << projectf_p << " already exists, do you want to delete it ? (Y/(other key for NO)) > ";
@@ -158,7 +158,7 @@ int init_files(std::string projectf_p) {
             std::filesystem::remove_all(projectf_p);
             // copy files into the directory
             std::string template_path = executable_path + "templates\\" + project_type;
-            std::filesystem::copy(template_path, projectf_p);
+            std::filesystem::copy(template_path, projectf_p, std::filesystem::copy_options::recursive);
             return 1;
         } else {
             return 0;

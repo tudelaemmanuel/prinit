@@ -3,4 +3,5 @@
 // Don't skip spaces the program may crash
 // Only use '\' in workspace location !
 
-Desktop : C:\Users\emman\Bureau\
+// - Example -
+// Desktop : C:\Users\[username]\Bureau\
