@@ -1,5 +1,5 @@
 # prinit
-Prinit is a tool for winsows to start your projects faster.
+Prinit is a tool for windows to start your projects faster.
 
 # command
 
