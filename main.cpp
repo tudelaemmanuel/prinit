@@ -5,11 +5,13 @@
 #include <stdio.h>
 #include <map>
 
+// For settings files
 std::string comment_beg = "//";
-std::string command_scheme = "";
+// Command args
 std::string project_name = "";
-std::string project_workspace = "";
 std::string project_type = "";
+std::string project_workspace = "";
+// Path of the executable
 std::string executable_path = "";
 
 int b_length(char* buffer) {
@@ -83,51 +85,16 @@ bool str_endsw(std::string str, std::string end) {
     return true;
 }
 
-void init_settings(std::string args[]) {
+void init_settings() {
     std::ifstream file;
     std::string settings_path = executable_path;
     settings_path += "settings.txt";
     file.open(settings_path);
     if (file.is_open()) {
-        std::string file_line;
-        while (file.good()) {
-            std::getline(file, file_line);
-            // check if line is not a comment and not empty line
-            if (!str_beginw(file_line, comment_beg) && file_line.length() != 0) {
-                // COMMAND SCHEME
-                if (str_beginw(file_line, "command_scheme : ")) {
-                    std::string arg_order[3];
-                    int i = 0;
-                    int argo_i = -1;
-                    // read settings line to find commands order
-                    while (file_line[i] != '\0') {
-                        if (file_line[i] == '[') {
-                            argo_i++;
-                        }
-                        if (argo_i != -1) {
-                            if (file_line[i] != ']' && file_line[i] != '[') { 
-                                arg_order[argo_i] += file_line[i];
-                            }
-                        }
-                        i++;
-                    }
-                    // set project infos depending on commands order and
-                    // args given by the user
-                    for (int j = 0; j < 3; j++) {
-                        if (arg_order[j] == "project_name") {
-                            project_name = args[j];
-                        }else if (arg_order[j] == "project_workspace") {
-                            project_workspace = args[j];
-                        }else {
-                            project_type = args[j];
-                        }
-                    }
-                }
-            }
-        }
+        // Do something with the settings
     } else {
-        std::cout << "Missing settings.txt file" << '\n';
-        throw "Missing settings.txt file";
+        std::cout << "Warning : " << "Missing settings.txt file" << '\n';
+        // throw "Missing settings.txt file";
     }
 }
 
@@ -236,11 +203,13 @@ int init_workspace() {
 
 int main(int argc, char* argv[]) {
     if (argc == 4) {
+        init_settings();
         // argv[0] is the name of the executable
         executable_path = get_execpath(argv[0]);
-        // put args in array
-        std::string args[3] = {argv[1], argv[2], argv[3]};
-        init_settings(args);
+        // Store args
+        project_name = argv[1];
+        project_type = argv[2];
+        project_workspace = argv[3];
         // itype_s = 1 if type is valid 0 otherwise
         int itype_s = init_type();
         if (itype_s) {
