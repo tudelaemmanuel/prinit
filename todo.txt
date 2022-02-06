@@ -1,0 +1,7 @@
+- Remove command scheme option
+- Add options :
+    Will be a way to modify the content of templates when creating the project
+    on the basis of options you created.
+    Ex:
+        You create a web project (web : template) and you want to add the basic lines in script.js for a
+        canvas project (canvas : option)

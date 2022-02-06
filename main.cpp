@@ -195,8 +195,8 @@ int init_workspace() {
                     }
                     // skip line separator
                     // "workspace_name : workspace_path"
-                    //               ^   
-                    //               i + 3
+                    //               |---^   
+                    //                   i + 3
                     i += 3;
                     while (file_line[i] != '\0') {
                         workspc_p += file_line[i];
