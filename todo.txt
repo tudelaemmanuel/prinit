@@ -4,3 +4,36 @@
     Ex:
         You create a web project (web : template) and you want to add the basic lines in script.js for a
         canvas project (canvas : option)
+    More precise project creation
+    Global options :
+        added by a '.'
+        prinit project_name web C:\ .global_option
+    Template option :
+        added by a '-'
+        prinit project_name web C:\ -template_option
+
+    The option is a folder with files in it, files to add or file to modify
+
+    When the project is created, the program will search options mentionned
+    Global_options will be searched in a separated folder
+    template_options will be searched in the selected template folder of the project
+
+    Every files in the options will be searched in the project folder
+
+    GET OPTIONS FROM COMMAND
+
+    after project folder is ready
+
+    COMPARE FILES AND MERGE
+
+    If the file is a folder :
+        Search for the folder in the project folder
+            Folder found :
+                Compare files
+            Folder not found :
+                Copy whole folder in the right place
+
+    If the file is found merge the file :
+        Just replace the file
+
+    If the file is not found copy the whole file
