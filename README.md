@@ -50,3 +50,19 @@ _templates_ is the folder where templates folders are stored (cpp, c, etc...).
 - You can create new folders
 
 Everything is done automatically !
+
+# Options
+
+Options are stored in folders named like _!prinit-options_
+
+There is one global option folder stored in the root of prinit fodler
+and you can create template-options in template's folders
+
+Options will modify your template by merging the folders
+
+Non existing files will be added in your project files
+Existing files will be replaced (Files will be searched recursively, the first one found will be replaced)
+
+Template options can be specified with a '-' like "-option1"
+Global options can be specified with a '.' like ".option2"
+
