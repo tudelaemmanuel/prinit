@@ -305,7 +305,7 @@ void merge_folders(std::string from_path, std::string to_path) {
             if (existing_folder_path != "") {
                 merge_folders(file_path, existing_folder_path);
             } else {
-                std::string new_folder_path = to_path + "/" + relative_path + "/" + folder_name;
+                std::string new_folder_path = project_path + "/" + relative_path + "/" + folder_name;
                 std::filesystem::copy(file_path, new_folder_path, std::filesystem::copy_options::recursive);
             }
         } else {
@@ -315,7 +315,7 @@ void merge_folders(std::string from_path, std::string to_path) {
                 std::filesystem::remove_all(existing_file_path);
                 std::filesystem::copy(file_path, existing_file_path, std::filesystem::copy_options::recursive);
             } else {
-                std::string new_file_path = to_path + "/" + relative_path + "/" + file_name;
+                std::string new_file_path = project_path + "/" + relative_path + "/" + file_name;
                 std::filesystem::copy(file_path, new_file_path, std::filesystem::copy_options::recursive);
             }
         }
