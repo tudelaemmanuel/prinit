@@ -361,9 +361,9 @@ void init_options(char** args) {
 
 int main(int argc, char* argv[]) {
     if (argc >= 4) {
-        init_settings();
         // argv[0] is the name of the executable
         executable_path = get_execpath(argv[0]);
+        init_settings();
         // Store args
         project_name = argv[1];
         project_type = argv[2];
